@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-    <title>AdminPagos · Gestión de pagos para conjuntos</title>
+    <title>Loini · Gestión de pagos para conjuntos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
@@ -15,19 +15,19 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background: #f0f2f5;
-            color: #1a1a2e;
+            background: #f0f2f6;
+            color: #0f1a2e;
             line-height: 1.7;
         }
 
-        /* ===== TARJETA DE BIENVENIDA (OVERLAY) ===== */
+        /* ===== OVERLAY NEUTRO (SOLO COOKIES) ===== */
         .overlay-card {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 20, 50, 0.8);
+            background: rgba(8, 16, 36, 0.75);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             display: flex;
@@ -45,52 +45,50 @@
 
         .card-box {
             background: #ffffff;
-            max-width: 520px;
+            max-width: 480px;
             width: 100%;
             border-radius: 2rem;
-            padding: 2.8rem 2.2rem 2.2rem;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+            padding: 2.5rem 2rem 2rem;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.30);
             text-align: left;
-            position: relative;
             border: 1px solid rgba(255,255,255,0.1);
         }
         .card-box .emoji-big {
-            font-size: 3.8rem;
+            font-size: 3rem;
             display: block;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
         .card-box .badge {
             display: inline-block;
-            background: #2d6a9f;
+            background: #2b5f8a;
             color: white;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 600;
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             margin-bottom: 0.5rem;
         }
         .card-box h2 {
             font-weight: 700;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             letter-spacing: -0.02em;
             color: #0a1428;
-            margin: 0.2rem 0 0.3rem;
+            margin: 0.1rem 0 0.2rem;
         }
         .card-box .sub {
-            color: #4a4a62;
+            color: #4a5a6e;
             font-weight: 400;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 1.2rem;
-            padding: 0;
             line-height: 1.6;
         }
         .card-box .sub strong {
             color: #0a1428;
         }
         .card-box .sub .politicas-link {
-            color: #2d6a9f;
+            color: #2b5f8a;
             font-weight: 600;
             text-decoration: none;
             border-bottom: 2px solid transparent;
@@ -100,46 +98,46 @@
             border-top: none;
             border-left: none;
             border-right: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-family: inherit;
             padding: 0;
         }
         .card-box .sub .politicas-link:hover {
-            border-bottom-color: #2d6a9f;
+            border-bottom-color: #2b5f8a;
         }
         .card-box .btn-accept {
-            background: #2d6a9f;
+            background: #2b5f8a;
             color: white;
             border: none;
-            padding: 0.9rem 2rem;
+            padding: 0.85rem 2rem;
             border-radius: 50px;
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
             transition: 0.2s;
             width: 100%;
-            box-shadow: 0 6px 20px rgba(45,106,159,0.4);
+            box-shadow: 0 6px 20px rgba(43,95,138,0.35);
         }
         .card-box .btn-accept:hover {
-            background: #1f4f7a;
+            background: #1d4466;
             transform: scale(1.01);
         }
         .card-footer-links {
-            margin-top: 1.2rem;
-            font-size: 0.8rem;
-            color: #6b6b82;
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            color: #6b7b8e;
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
         }
         .card-footer-links .link-btn {
-            color: #2d6a9f;
+            color: #2b5f8a;
             font-weight: 500;
             text-decoration: none;
             background: none;
             border: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-family: inherit;
             cursor: pointer;
             transition: 0.2s;
@@ -147,15 +145,15 @@
             border-bottom: 2px solid transparent;
         }
         .card-footer-links .link-btn:hover {
-            border-bottom-color: #2d6a9f;
-            color: #1f4f7a;
+            border-bottom-color: #2b5f8a;
+            color: #1d4466;
         }
         .card-box .revoke-text {
-            font-size: 0.7rem;
-            color: #8a8aa2;
+            font-size: 0.65rem;
+            color: #8a9aaa;
             text-align: center;
-            margin-top: 1rem;
-            padding-top: 0.8rem;
+            margin-top: 0.9rem;
+            padding-top: 0.7rem;
             border-top: 1px solid #e8eaed;
         }
 
@@ -163,62 +161,67 @@
         .main-wrap {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 1.5rem 1.5rem 3rem;
+            padding: 1.5rem 1.5rem 2.5rem;
         }
 
         .top-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.4rem 0 1.5rem;
-            border-bottom: 2px solid #e0e4e8;
+            padding: 0.4rem 0 1.2rem;
+            border-bottom: 2px solid #e0e4ec;
             flex-wrap: wrap;
             gap: 0.8rem;
         }
         .logo-brand {
             font-weight: 700;
-            font-size: 1.6rem;
-            letter-spacing: -0.5px;
+            font-size: 1.5rem;
+            letter-spacing: -0.4px;
             color: #0a1428;
             display: flex;
             align-items: center;
             gap: 0.4rem;
         }
         .logo-brand span {
-            background: #2d6a9f;
+            background: #2b5f8a;
             color: white;
             padding: 0.1rem 0.9rem;
             border-radius: 40px;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 600;
             letter-spacing: 0.3px;
+        }
+        .logo-brand .subname {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #4a5a6e;
+            margin-left: 0.3rem;
         }
         .nav-menu {
             display: flex;
             gap: 1.8rem;
             font-weight: 500;
-            color: #3a3a52;
+            color: #3a4a5e;
         }
         .nav-menu button {
             background: none;
             border: none;
             font-family: inherit;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
-            color: #3a3a52;
+            color: #3a4a5e;
             cursor: pointer;
             transition: 0.15s;
             padding: 0.3rem 0;
         }
         .nav-menu button:hover {
-            color: #2d6a9f;
+            color: #2b5f8a;
         }
         .nav-menu button.active {
-            color: #2d6a9f;
-            border-bottom: 3px solid #2d6a9f;
+            color: #2b5f8a;
+            border-bottom: 3px solid #2b5f8a;
         }
 
-        /* ===== SECCIONES DE CONTENIDO ===== */
         .section-content {
             display: none;
             animation: fadeIn 0.4s ease;
@@ -226,321 +229,330 @@
         .section-content.active {
             display: block;
         }
-
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(12px); }
+            0% { opacity: 0; transform: translateY(10px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
         .hero-section {
-            margin: 2.5rem 0 3.5rem;
+            margin: 2rem 0 3rem;
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
             align-items: center;
             justify-content: space-between;
-            background: linear-gradient(135deg, #f0f4fa 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #eef2f8 0%, #ffffff 100%);
             padding: 2.5rem;
             border-radius: 2rem;
-            border: 1px solid #e0e8f0;
+            border: 1px solid #dee4ec;
         }
         .hero-text {
             flex: 1 1 380px;
         }
         .hero-text .badge-hero {
             display: inline-block;
-            background: #2d6a9f;
+            background: #2b5f8a;
             color: white;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             padding: 0.2rem 1rem;
-            border-radius: 20px;
+            border-radius: 30px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
         .hero-text h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            letter-spacing: -2px;
+            letter-spacing: -1.5px;
             line-height: 1.1;
         }
         .hero-text .tagline {
-            font-size: 1.15rem;
-            color: #4a5a6a;
-            margin-top: 0.7rem;
+            font-size: 1.05rem;
+            color: #4a5a6e;
+            margin-top: 0.6rem;
             max-width: 540px;
         }
+        .hero-text .consultor {
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            color: #2b5f8a;
+            font-weight: 600;
+        }
         .hero-emoji {
-            flex: 0 0 140px;
+            flex: 0 0 120px;
             display: flex;
             justify-content: center;
-            font-size: 6.5rem;
+            font-size: 5.5rem;
             line-height: 1;
         }
 
         .stats-bar {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.2rem;
+            margin: 1.5rem 0 2.5rem;
         }
         .stats-bar .stat {
             background: white;
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 1.2rem;
             text-align: center;
-            border: 1px solid #e0e8f0;
+            border: 1px solid #dee4ec;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
         .stats-bar .stat .number {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: #2d6a9f;
+            color: #2b5f8a;
         }
         .stats-bar .stat .label {
-            font-size: 0.85rem;
-            color: #5a6a7a;
+            font-size: 0.8rem;
+            color: #5a6a7e;
         }
 
         .ad-spot {
             background: #ffffff;
             border-radius: 1.5rem;
             padding: 1rem;
-            margin: 2.5rem 0;
-            border: 1px solid #e0e8f0;
+            margin: 2rem 0;
+            border: 1px solid #dee4ec;
             box-shadow: 0 4px 12px rgba(0,0,0,0.04);
             overflow: hidden;
         }
         .ad-spot .ad-label {
-            font-size: 0.65rem;
-            color: #7a8a9a;
+            font-size: 0.6rem;
+            color: #7a8a9e;
             text-transform: uppercase;
             letter-spacing: 1px;
             padding: 0.2rem 0.8rem;
             display: inline-block;
             background: #f0f4fa;
             border-radius: 20px;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
         .ad-spot .ad-content {
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 0.5rem;
+            padding: 0.3rem;
         }
         .ad-spot .ad-content .ad-text {
             flex: 1;
         }
         .ad-spot .ad-content .ad-text h4 {
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #0a1428;
         }
         .ad-spot .ad-content .ad-text p {
-            font-size: 0.85rem;
-            color: #5a6a7a;
+            font-size: 0.8rem;
+            color: #5a6a7e;
         }
         .ad-spot .ad-content .ad-img {
-            flex: 0 0 80px;
+            flex: 0 0 70px;
         }
         .ad-spot .ad-content .ad-img img {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             object-fit: cover;
             border-radius: 0.8rem;
         }
 
         .grid-articles {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.8rem;
+            margin: 2.5rem 0;
         }
         .grid-articles .item {
             background: white;
             padding: 1.8rem 1.5rem;
             border-radius: 1.5rem;
             box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-            border: 1px solid #e8ecf0;
+            border: 1px solid #e4e8f0;
             transition: 0.2s;
         }
         .grid-articles .item:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(45,106,159,0.10);
+            box-shadow: 0 8px 24px rgba(43,95,138,0.10);
         }
         .grid-articles .item .icon-emoji {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             display: block;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
         .grid-articles .item h3 {
             font-weight: 600;
-            margin-bottom: 0.4rem;
-            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
         }
         .grid-articles .item p {
-            color: #5a6a7a;
-            font-size: 0.95rem;
+            color: #5a6a7e;
+            font-size: 0.9rem;
         }
 
         .blog-section {
             background: white;
             border-radius: 2rem;
-            padding: 2.2rem 2.5rem;
-            margin: 3rem 0;
-            border: 1px solid #e0e8f0;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            border: 1px solid #dee4ec;
             box-shadow: 0 6px 24px rgba(0,0,0,0.03);
         }
         .blog-section h2 {
             font-weight: 700;
-            font-size: 2rem;
-            letter-spacing: -0.5px;
-            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+            letter-spacing: -0.4px;
+            margin-bottom: 1rem;
         }
         .blog-section h3 {
             font-weight: 600;
-            font-size: 1.3rem;
-            margin-top: 1.8rem;
-            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0.5rem;
             color: #0a1428;
         }
         .blog-section p {
-            color: #3a4a5a;
-            margin-bottom: 1rem;
+            color: #3a4a5e;
+            margin-bottom: 0.8rem;
         }
         .blog-section ul {
             padding-left: 1.5rem;
-            margin-bottom: 1.2rem;
-            color: #3a4a5a;
+            margin-bottom: 1rem;
+            color: #3a4a5e;
         }
         .blog-section ul li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.3rem;
         }
         .blog-section .highlight-box {
             background: #f0f6fc;
-            border-left: 4px solid #2d6a9f;
-            padding: 1rem 1.5rem;
+            border-left: 4px solid #2b5f8a;
+            padding: 0.9rem 1.3rem;
             border-radius: 0.8rem;
-            margin: 1.5rem 0;
+            margin: 1.2rem 0;
         }
 
-        /* ===== POLÍTICAS DE PRIVACIDAD ===== */
         #politicas {
             display: none;
             background: white;
             border-radius: 2rem;
             padding: 2.5rem;
             margin: 2rem 0;
-            border: 1px solid #e0e8f0;
+            border: 1px solid #dee4ec;
             box-shadow: 0 6px 24px rgba(0,0,0,0.03);
         }
         #politicas.active {
             display: block;
         }
         #politicas h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.5px;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.4px;
             color: #0a1428;
         }
         #politicas h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            margin-top: 1.8rem;
-            margin-bottom: 0.6rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0.4rem;
             color: #0a1428;
         }
         #politicas p {
-            color: #3a4a5a;
-            margin-bottom: 1rem;
+            color: #3a4a5e;
+            margin-bottom: 0.8rem;
         }
         #politicas ul {
             padding-left: 1.5rem;
-            margin-bottom: 1rem;
-            color: #3a4a5a;
+            margin-bottom: 0.8rem;
+            color: #3a4a5e;
         }
         #politicas ul li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
         #politicas .back-btn {
-            background: #2d6a9f;
+            background: #2b5f8a;
             color: white;
             border: none;
-            padding: 0.7rem 1.8rem;
+            padding: 0.6rem 1.8rem;
             border-radius: 40px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             cursor: pointer;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
             transition: 0.2s;
         }
         #politicas .back-btn:hover {
-            background: #1f4f7a;
+            background: #1d4466;
         }
 
         .footer-full {
-            margin-top: 4rem;
-            padding-top: 2.5rem;
-            border-top: 2px solid #e0e8f0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #dee4ec;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 2rem;
             background: #ffffff;
             border-radius: 2rem;
-            padding: 2.5rem 2.5rem;
-            border: 1px solid #e0e8f0;
+            padding: 2rem 2.2rem;
+            border: 1px solid #dee4ec;
         }
         .footer-full .col h4 {
             font-weight: 700;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             color: #0a1428;
+            font-size: 1rem;
         }
         .footer-full .col a {
             display: block;
-            color: #4a5a6a;
+            color: #4a5a6e;
             text-decoration: none;
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
             transition: 0.15s;
         }
-        .footer-full .col a:hover { color: #2d6a9f; }
+        .footer-full .col a:hover { color: #2b5f8a; }
         .footer-full .col p {
-            color: #4a5a6a;
-            font-size: 0.95rem;
+            color: #4a5a6e;
+            font-size: 0.9rem;
+        }
+        .footer-full .contacto-destacado {
+            font-weight: 600;
+            color: #2b5f8a;
         }
         .footer-bottom {
             grid-column: 1 / -1;
-            border-top: 1px solid #e0e8f0;
-            padding-top: 1.5rem;
-            margin-top: 0.5rem;
+            border-top: 1px solid #dee4ec;
+            padding-top: 1.2rem;
+            margin-top: 0.3rem;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 1rem;
-            font-size: 0.85rem;
-            color: #5a6a7a;
+            font-size: 0.8rem;
+            color: #5a6a7e;
         }
         .footer-bottom a {
-            color: #2d6a9f;
+            color: #2b5f8a;
             text-decoration: none;
             font-weight: 500;
         }
         .footer-bottom .email-contact {
-            color: #2d6a9f;
+            color: #2b5f8a;
             font-weight: 600;
         }
 
         @media (max-width: 650px) {
-            .hero-text h1 { font-size: 2.2rem; }
+            .hero-text h1 { font-size: 2rem; }
             .hero-section { padding: 1.5rem; }
-            .card-box { padding: 2rem 1.5rem; }
+            .card-box { padding: 1.8rem 1.2rem; }
             .top-bar { flex-direction: column; align-items: flex-start; }
-            .nav-menu { gap: 1rem; flex-wrap: wrap; }
-            .blog-section { padding: 1.5rem; }
-            .footer-full { padding: 1.8rem; }
-            .hero-emoji { flex: 1 1 100%; font-size: 4.5rem; }
+            .nav-menu { gap: 0.8rem; flex-wrap: wrap; }
+            .blog-section { padding: 1.2rem; }
+            .footer-full { padding: 1.5rem; }
+            .hero-emoji { flex: 1 1 100%; font-size: 3.8rem; }
             .ad-spot .ad-content {
                 flex-direction: column;
                 align-items: flex-start;
@@ -553,7 +565,7 @@
                 width: 100%;
                 height: auto;
             }
-            #politicas { padding: 1.5rem; }
+            #politicas { padding: 1.2rem; }
             .stats-bar { grid-template-columns: 1fr 1fr; }
         }
     </style>
@@ -561,23 +573,20 @@
 <body>
 
     <!-- ============================================================ -->
-    <!--  TARJETA DE BIENVENIDA (OVERLAY)                              -->
+    <!--  OVERLAY NEUTRO (SOLO COOKIES / POLÍTICAS DE PRIVACIDAD)      -->
     <!-- ============================================================ -->
     <div id="welcomeOverlay" class="overlay-card">
         <div class="card-box">
-            <span class="badge">🔒 Privacidad</span>
-            <span class="emoji-big">🏢</span>
-            <h2>AdminPagos</h2>
+            <span class="badge">🍪 Cookies</span>
+            <span class="emoji-big">📋</span>
+            <h2>Uso de cookies</h2>
             <p class="sub">
-                Gestión inteligente de pagos para conjuntos residenciales.
-            </p>
-            <p class="sub" style="font-size:0.85rem; color:#6a7a8a; margin-bottom:1.2rem;">
-                Para ofrecerte la mejor experiencia, utilizamos cookies y tecnologías similares que nos ayudan a mejorar nuestros servicios.
-                <br /><br />
-                Al hacer clic en <strong>Aceptar y continuar</strong> consientes el uso de cookies conforme a nuestra <button class="politicas-link" id="inlinePoliticas">Política de Privacidad</button>.
+                Este sitio utiliza cookies para mejorar tu experiencia, recordar preferencias y analizar el tráfico.
+                Al hacer clic en <strong>Aceptar</strong>, consientes el uso de cookies conforme a nuestra
+                <button class="politicas-link" id="inlinePoliticas">Política de Privacidad</button>.
             </p>
 
-            <button id="acceptBtn" class="btn-accept">Aceptar y continuar</button>
+            <button id="acceptBtn" class="btn-accept">Aceptar</button>
 
             <div class="card-footer-links">
                 <button class="link-btn" data-link="privacidad" id="showPoliticas">Políticas de privacidad</button>
@@ -598,15 +607,16 @@
 
         <header class="top-bar">
             <div class="logo-brand">
-                <span style="font-size:1.8rem;">🏢</span>
-                Admin<span>Pagos</span>
+                <span style="font-size:1.6rem;">🏢</span>
+                Loini<span>Consultoría</span>
+                <span class="subname">· Loinibeth Badell Q.</span>
             </div>
             <nav class="nav-menu">
                 <button class="active" data-section="inicio">Inicio</button>
                 <button data-section="servicios">Servicios</button>
                 <button data-section="consejos">Consejos</button>
                 <button data-section="recursos">Recursos</button>
-                <button id="navPoliticas" style="color:#2d6a9f;">Privacidad</button>
+                <button id="navPoliticas" style="color:#2b5f8a;">Privacidad</button>
             </nav>
         </header>
 
@@ -617,40 +627,43 @@
 
             <section class="hero-section">
                 <div class="hero-text">
-                    <span class="badge-hero">💰 Solución integral</span>
-                    <h1>Gestiona los pagos de tu conjunto con <br />transparencia y eficiencia</h1>
+                    <span class="badge-hero">🧾 Gestión de pagos</span>
+                    <h1>Optimiza la administración de tu conjunto</h1>
                     <p class="tagline">
-                        AdminPagos es la plataforma que simplifica el cobro de cuotas de administración, el control de morosidad y la generación de reportes financieros para tu comunidad.
+                        Asesoría personalizada en cobro de cuotas, control de morosidad y reportes financieros para comunidades residenciales.
                     </p>
+                    <div class="consultor">
+                        👩‍💼 Loinibeth Badell Quintero · Consultora en gestión de pagos
+                    </div>
                 </div>
                 <div class="hero-emoji">🏦</div>
             </section>
 
             <div class="stats-bar">
                 <div class="stat">
-                    <div class="number">98%</div>
-                    <div class="label">de recaudo efectivo</div>
+                    <div class="number">+15</div>
+                    <div class="label">conjuntos asesorados</div>
                 </div>
                 <div class="stat">
-                    <div class="number">60%</div>
-                    <div class="label">menos morosidad</div>
+                    <div class="number">92%</div>
+                    <div class="label">recaudo efectivo</div>
+                </div>
+                <div class="stat">
+                    <div class="number">55%</div>
+                    <div class="label">reducción de morosidad</div>
                 </div>
                 <div class="stat">
                     <div class="number">24/7</div>
-                    <div class="label">acceso para propietarios</div>
-                </div>
-                <div class="stat">
-                    <div class="number">+500</div>
-                    <div class="label">conjuntos confían en nosotros</div>
+                    <div class="label">acceso a plataforma</div>
                 </div>
             </div>
 
             <div class="ad-spot">
-                <span class="ad-label">🌟 Destacado</span>
+                <span class="ad-label">📌 Servicio destacado</span>
                 <div class="ad-content">
                     <div class="ad-text">
-                        <h4>🚀 Plataforma de cobro inteligente</h4>
-                        <p>Automatiza el cobro de cuotas, envía recordatorios y recibe pagos por PSE, tarjeta o transferencia.</p>
+                        <h4>📋 Diagnóstico financiero gratuito</h4>
+                        <p>Analizamos el estado actual de los pagos de tu conjunto y te entregamos un plan de acción sin costo.</p>
                     </div>
                     <div class="ad-img">
                         <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=200&h=200&fit=crop&crop=center" alt="Finanzas" loading="lazy" />
@@ -662,73 +675,73 @@
                 <div class="item">
                     <span class="icon-emoji">💳</span>
                     <h3>Cobro de cuotas</h3>
-                    <p>Recibe pagos de los propietarios a través de múltiples métodos: PSE, tarjeta de crédito, transferencia.</p>
+                    <p>Implementamos métodos de pago ágiles para que los propietarios paguen sin excusas.</p>
                 </div>
                 <div class="item">
                     <span class="icon-emoji">📊</span>
-                    <h3>Reportes automáticos</h3>
-                    <p>Genera informes mensuales de ingresos, gastos y morosidad para la asamblea de propietarios.</p>
+                    <h3>Reportes claros</h3>
+                    <p>Dashboards y reportes mensuales que todos entienden, para asambleas transparentes.</p>
                 </div>
                 <div class="item">
                     <span class="icon-emoji">📱</span>
                     <h3>App para propietarios</h3>
-                    <p>Los residentes consultan su saldo, pagan y reciben notificaciones desde su celular.</p>
+                    <p>Los residentes consultan saldo, pagan y reciben recordatorios desde su celular.</p>
                 </div>
                 <div class="item">
                     <span class="icon-emoji">🔔</span>
                     <h3>Recordatorios automáticos</h3>
-                    <p>Envía notificaciones por correo y WhatsApp antes del vencimiento de cada cuota.</p>
+                    <p>Envíos por correo y WhatsApp antes del vencimiento de cada cuota.</p>
                 </div>
             </div>
 
             <section class="blog-section">
-                <h2>🏢 ¿Por qué elegir AdminPagos?</h2>
+                <h2>🏢 ¿Por qué trabajar conmigo?</h2>
                 <p>
-                    Administrar un conjunto residencial implica grandes desafíos financieros. AdminPagos nació para simplificar el cobro de cuotas de administración, reducir la morosidad y brindar transparencia total a los propietarios.
+                    Como consultora especializada en gestión de pagos para conjuntos residenciales, ayudo a los administradores a reducir la morosidad, mejorar la comunicación con los propietarios y mantener finanzas sanas.
                 </p>
-                <h3>1. Cobro automatizado de cuotas</h3>
+                <h3>1. Enfoque personalizado</h3>
                 <p>
-                    Olvídate de las planillas en Excel y los cobros puerta a puerta. Con AdminPagos, los propietarios reciben un enlace de pago por correo o WhatsApp y pueden pagar en segundos.
+                    Cada conjunto es único. Diseñamos estrategias a la medida según el tamaño, la cultura de pago y las necesidades de tu comunidad.
                 </p>
                 <div class="highlight-box">
-                    <strong>💡 Dato:</strong> Los conjuntos que usan AdminPagos reducen la morosidad hasta en un 60% en los primeros 3 meses.
+                    <strong>💡 Dato:</strong> Los conjuntos que implementan mis recomendaciones reducen la morosidad hasta en un 55% en los primeros 4 meses.
                 </div>
 
-                <h3>2. Múltiples métodos de pago</h3>
+                <h3>2. Métodos de pago efectivos</h3>
                 <p>
-                    Aceptamos todos los métodos de pago que los colombianos usan a diario:
+                    Facilitamos el pago a los propietarios con opciones como:
                 </p>
                 <ul>
-                    <li><strong>PSE:</strong> El método más usado en Colombia, seguro y rápido.</li>
+                    <li><strong>PSE:</strong> El método más usado en Colombia, rápido y seguro.</li>
                     <li><strong>Tarjetas de crédito/débito:</strong> Aceptamos Visa, Mastercard, American Express.</li>
-                    <li><strong>Transferencias bancarias:</strong> Recibe pagos directamente en tu cuenta.</li>
-                    <li><strong>Efectivo:</strong> A través de corresponsales bancarios.</li>
+                    <li><strong>Transferencias bancarias:</strong> Recibe pagos directamente en la cuenta del conjunto.</li>
+                    <li><strong>Corresponsales bancarios:</strong> Para quienes prefieren pagar en efectivo.</li>
                 </ul>
 
                 <h3>3. Control de morosidad</h3>
                 <p>
-                    Nuestra plataforma te permite identificar rápidamente a los morosos y aplicar los mecanismos de cobro establecidos en el reglamento interno. La comunicación temprana y el diálogo suelen ser más efectivos que las sanciones inmediatas.
+                    Identificamos tempranamente a los morosos y aplicamos estrategias de cobro respetuosas pero efectivas, evitando conflictos innecesarios.
                 </p>
                 <ul>
-                    <li><strong>Registro diario:</strong> Mantén actualizado el estado de cuentas de cada propietario.</li>
-                    <li><strong>Reportes de morosidad:</strong> Genera listados de morosos con antigüedad de la deuda.</li>
-                    <li><strong>Planes de pago:</strong> Ofrece facilidades para morosos con dificultades temporales.</li>
+                    <li><strong>Reporte de cartera:</strong> Listado actualizado de deudores con antigüedad.</li>
+                    <li><strong>Planes de pago:</strong> Ofrecemos facilidades para morosos con dificultades temporales.</li>
+                    <li><strong>Comunicación asertiva:</strong> Recordatorios cordiales y seguimiento personalizado.</li>
                 </ul>
 
-                <h3>4. Transparencia financiera</h3>
+                <h3>4. Transparencia total</h3>
                 <p>
-                    La transparencia genera confianza. Publica periódicamente los estados financieros en un lugar visible (físico o digital). Realiza asambleas informativas donde los propietarios puedan preguntar y entender el manejo de los recursos.
+                    La confianza se construye con información clara. Publicamos estados financieros en un dashboard accesible para todos los propietarios.
                 </p>
                 <div class="highlight-box">
-                    <strong>📌 Recomendación:</strong> Usa nuestro dashboard simple que muestra ingresos, gastos y saldo en tiempo real.
+                    <strong>📌 Recomendación:</strong> Uso un dashboard simple que muestra ingresos, gastos y saldo en tiempo real.
                 </div>
 
                 <h3>5. Beneficios para tu conjunto</h3>
                 <ul>
-                    <li><strong>Ahorro de tiempo:</strong> Automatiza el cobro y la conciliación de pagos.</li>
+                    <li><strong>Ahorro de tiempo:</strong> Automatización de cobros y conciliación.</li>
                     <li><strong>Reducción de morosidad:</strong> Recordatorios automáticos y facilidades de pago.</li>
-                    <li><strong>Transparencia:</strong> Todos los movimientos financieros disponibles para la comunidad.</li>
-                    <li><strong>Asesoría personalizada:</strong> Te acompañamos en la implementación de la plataforma.</li>
+                    <li><strong>Transparencia:</strong> Todos los movimientos disponibles para la comunidad.</li>
+                    <li><strong>Acompañamiento continuo:</strong> Estoy disponible para resolver dudas y ajustar estrategias.</li>
                 </ul>
             </section>
 
@@ -736,8 +749,8 @@
                 <span class="ad-label">📦 Oferta especial</span>
                 <div class="ad-content">
                     <div class="ad-text">
-                        <h4>📦 Primer mes gratis</h4>
-                        <p>Contrata AdminPagos y recibe el primer mes de servicio sin costo. ¡Solo por tiempo limitado!</p>
+                        <h4>📦 Diagnóstico inicial sin costo</h4>
+                        <p>Agenda una asesoría de 30 minutos para revisar la situación financiera de tu conjunto y recibir recomendaciones prácticas.</p>
                     </div>
                     <div class="ad-img">
                         <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=200&h=200&fit=crop&crop=center" alt="Edificio" loading="lazy" />
@@ -750,61 +763,55 @@
         <!--  SECCIÓN: SERVICIOS                                           -->
         <!-- ============================================================ -->
         <div id="servicios" class="section-content">
-            <h2 class="page-title">💰 Nuestros servicios</h2>
-            <p class="page-description">Soluciones financieras diseñadas para conjuntos residenciales de todos los tamaños.</p>
+            <h2 style="font-size:1.8rem; font-weight:700; margin-bottom:0.3rem;">💰 Servicios de consultoría</h2>
+            <p style="color:#4a5a6e; margin-bottom:1.8rem;">Soluciones financieras para conjuntos residenciales de todos los tamaños.</p>
 
-            <div class="card-list">
-                <div class="card-item">
-                    <span class="emoji-icon">💳</span>
-                    <h4>Cobro de cuotas de administración</h4>
-                    <p>Recibe pagos de los propietarios a través de PSE, tarjeta de crédito o transferencia bancaria.</p>
-                    <span class="tag">💳 Pagos</span>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1.5rem;">
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2.2rem;">💳</span>
+                    <h4 style="margin:0.3rem 0;">Cobro de cuotas</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Implementación de métodos de pago ágiles (PSE, tarjetas, transferencias).</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">📊</span>
-                    <h4>Reportes financieros automáticos</h4>
-                    <p>Genera informes mensuales de ingresos, gastos y morosidad para la asamblea de propietarios.</p>
-                    <span class="tag">📊 Reportes</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2.2rem;">📊</span>
+                    <h4 style="margin:0.3rem 0;">Reportes financieros</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Dashboards e informes mensuales para asambleas y administradores.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">📋</span>
-                    <h4>Control de morosidad</h4>
-                    <p>Identifica rápidamente a los propietarios morosos y aplica los mecanismos de cobro establecidos.</p>
-                    <span class="tag">📋 Control</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2.2rem;">📋</span>
+                    <h4 style="margin:0.3rem 0;">Control de morosidad</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Estrategias de cobro, planes de pago y seguimiento personalizado.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">📱</span>
-                    <h4>App para propietarios</h4>
-                    <p>Los residentes pueden consultar su saldo, pagar y recibir notificaciones desde su celular.</p>
-                    <span class="tag">📱 Móvil</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2.2rem;">📱</span>
+                    <h4 style="margin:0.3rem 0;">App para propietarios</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Plataforma móvil para consultar saldo, pagar y recibir notificaciones.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">🔍</span>
-                    <h4>Transparencia total</h4>
-                    <p>Todos los movimientos financieros disponibles para la comunidad en tiempo real.</p>
-                    <span class="tag">🔍 Transparencia</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2.2rem;">🔍</span>
+                    <h4 style="margin:0.3rem 0;">Transparencia total</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Publicación de estados financieros accesibles para toda la comunidad.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">📧</span>
-                    <h4>Recordatorios automáticos</h4>
-                    <p>Envía notificaciones por correo y WhatsApp antes del vencimiento de cada cuota.</p>
-                    <span class="tag">📧 Recordatorios</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2.2rem;">📧</span>
+                    <h4 style="margin:0.3rem 0;">Recordatorios automáticos</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Notificaciones por correo y WhatsApp antes del vencimiento de cuotas.</p>
                 </div>
             </div>
 
             <section class="blog-section" style="margin-top:2rem;">
-                <h3>📌 ¿Cómo funciona AdminPagos?</h3>
+                <h3>📌 ¿Cómo trabajo?</h3>
                 <p>
-                    Nuestra plataforma de gestión de pagos está diseñada para simplificar el cobro de cuotas de administración en conjuntos residenciales. Los propietarios pueden pagar desde su celular o computadora, y el administrador recibe los pagos directamente en su cuenta bancaria.
+                    Mi enfoque es práctico y cercano. Primero, realizo un diagnóstico de la situación actual del conjunto: nivel de morosidad, métodos de cobro existentes y canales de comunicación con los propietarios.
                 </p>
                 <ul>
-                    <li><strong>Paso 1:</strong> El administrador registra los propietarios y sus cuotas.</li>
-                    <li><strong>Paso 2:</strong> Los propietarios reciben un enlace de pago por correo o WhatsApp.</li>
-                    <li><strong>Paso 3:</strong> Pagan con PSE, tarjeta de crédito o transferencia.</li>
-                    <li><strong>Paso 4:</strong> El administrador recibe el reporte de pagos en tiempo real.</li>
+                    <li><strong>Paso 1:</strong> Diagnóstico gratuito de la cartera y procesos de cobro.</li>
+                    <li><strong>Paso 2:</strong> Diseño de un plan de acción personalizado.</li>
+                    <li><strong>Paso 3:</strong> Implementación de herramientas de pago y recordatorios.</li>
+                    <li><strong>Paso 4:</strong> Seguimiento y ajustes continuos para maximizar el recaudo.</li>
                 </ul>
                 <div class="highlight-box">
-                    <strong>💡 Beneficio:</strong> Reduce la morosidad hasta en un 60% con nuestros recordatorios automáticos.
+                    <strong>💡 Beneficio:</strong> Mis clientes logran una reducción de morosidad superior al 50% en los primeros 4 meses.
                 </div>
             </section>
         </div>
@@ -813,39 +820,39 @@
         <!--  SECCIÓN: CONSEJOS                                            -->
         <!-- ============================================================ -->
         <div id="consejos" class="section-content">
-            <h2 class="page-title">💡 Consejos para administradores</h2>
-            <p class="page-description">Tips prácticos para mejorar la gestión financiera de tu conjunto residencial.</p>
+            <h2 style="font-size:1.8rem; font-weight:700; margin-bottom:0.3rem;">💡 Consejos para administradores</h2>
+            <p style="color:#4a5a6e; margin-bottom:1.8rem;">Tips prácticos para mejorar la gestión financiera de tu conjunto residencial.</p>
 
-            <div class="card-list">
-                <div class="card-item">
-                    <span class="emoji-icon">✅</span>
-                    <h4>Revisa tus gastos fijos cada 6 meses</h4>
-                    <p>Contratos de servicios como vigilancia, aseo y mantenimiento pueden renegociarse para obtener mejores precios.</p>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1.5rem;">
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">✅</span>
+                    <h4 style="margin:0.3rem 0;">Revisa gastos fijos</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Cada 6 meses, renegocia contratos de vigilancia, aseo y mantenimiento.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">✅</span>
-                    <h4>Crea un fondo de reserva</h4>
-                    <p>Destina un porcentaje de las cuotas a un fondo para emergencias o reparaciones mayores.</p>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">✅</span>
+                    <h4 style="margin:0.3rem 0;">Fondo de reserva</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Destina un % de las cuotas a un fondo para emergencias o reparaciones mayores.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">✅</span>
-                    <h4>Comunica con claridad</h4>
-                    <p>Envía informes financieros claros y resumidos a todos los propietarios. La transparencia evita desconfianza.</p>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">✅</span>
+                    <h4 style="margin:0.3rem 0;">Comunicación clara</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Envía informes financieros claros y resumidos a todos los propietarios.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">✅</span>
-                    <h4>Digitaliza tus procesos</h4>
-                    <p>Usa AdminPagos para recibir pagos, enviar notificaciones y mantener registros actualizados.</p>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">✅</span>
+                    <h4 style="margin:0.3rem 0;">Digitaliza procesos</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Usa plataformas de cobro y recordatorios automáticos para reducir morosidad.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">✅</span>
-                    <h4>Realiza auditorías internas</h4>
-                    <p>Revisa los movimientos financieros cada trimestre para detectar inconsistencias a tiempo.</p>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">✅</span>
+                    <h4 style="margin:0.3rem 0;">Auditorías internas</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Revisa movimientos financieros cada trimestre para detectar inconsistencias.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">✅</span>
-                    <h4>Capacita al comité de finanzas</h4>
-                    <p>Asegúrate de que los miembros del comité entiendan los conceptos básicos de contabilidad y presupuestos.</p>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">✅</span>
+                    <h4 style="margin:0.3rem 0;">Capacita al comité</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Asegura que el comité de finanzas entienda contabilidad básica y presupuestos.</p>
                 </div>
             </div>
         </div>
@@ -854,45 +861,39 @@
         <!--  SECCIÓN: RECURSOS                                            -->
         <!-- ============================================================ -->
         <div id="recursos" class="section-content">
-            <h2 class="page-title">📎 Recursos útiles</h2>
-            <p class="page-description">Plantillas, guías y herramientas para una gestión financiera eficiente de tu conjunto.</p>
+            <h2 style="font-size:1.8rem; font-weight:700; margin-bottom:0.3rem;">📎 Recursos útiles</h2>
+            <p style="color:#4a5a6e; margin-bottom:1.8rem;">Plantillas, guías y herramientas para una gestión financiera eficiente.</p>
 
-            <div class="card-list">
-                <div class="card-item">
-                    <span class="emoji-icon">📊</span>
-                    <h4>Plantilla de presupuesto anual</h4>
-                    <p>Formato Excel para planificar ingresos y gastos de tu conjunto residencial.</p>
-                    <span class="tag">📊 Finanzas</span>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:1.5rem;">
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">📊</span>
+                    <h4 style="margin:0.3rem 0;">Plantilla de presupuesto</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Formato Excel para planificar ingresos y gastos anuales.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">📋</span>
-                    <h4>Formato de control de pagos</h4>
-                    <p>Registro de cuotas al día y morosos. Incluye alertas de vencimiento.</p>
-                    <span class="tag">⬇️ Descargar</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">📋</span>
+                    <h4 style="margin:0.3rem 0;">Control de pagos</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Registro de cuotas al día y morosos con alertas de vencimiento.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">📘</span>
-                    <h4>Guía: Cómo administrar un conjunto</h4>
-                    <p>Manual completo con buenas prácticas, normatividad colombiana y consejos.</p>
-                    <span class="tag">📄 PDF</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">📘</span>
+                    <h4 style="margin:0.3rem 0;">Guía de administración</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Manual con buenas prácticas y normatividad colombiana.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">📱</span>
-                    <h4>App AdminPagos</h4>
-                    <p>Descarga la aplicación móvil para gestionar pagos, comunicados y finanzas desde tu celular.</p>
-                    <span class="tag">🔗 Enlace</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">📱</span>
+                    <h4 style="margin:0.3rem 0;">App de pagos</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Plataforma móvil para gestionar pagos y comunicados.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">📹</span>
-                    <h4>Video tutorial: Cobro de cuotas</h4>
-                    <p>Explicación visual de cómo usar AdminPagos para cobrar cuotas.</p>
-                    <span class="tag">▶️ Ver</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">📹</span>
+                    <h4 style="margin:0.3rem 0;">Video tutorial</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Explicación visual del proceso de cobro de cuotas.</p>
                 </div>
-                <div class="card-item">
-                    <span class="emoji-icon">📄</span>
-                    <h4>Modelo de acta de asamblea</h4>
-                    <p>Formato para registrar acuerdos financieros y aprobaciones de la asamblea.</p>
-                    <span class="tag">⬇️ Descargar</span>
+                <div style="background:white; padding:1.5rem; border-radius:1.5rem; border:1px solid #dee4ec;">
+                    <span style="font-size:2rem;">📄</span>
+                    <h4 style="margin:0.3rem 0;">Acta de asamblea</h4>
+                    <p style="color:#5a6a7e; font-size:0.9rem;">Formato para registrar acuerdos financieros de la asamblea.</p>
                 </div>
             </div>
         </div>
@@ -903,64 +904,40 @@
         <div id="politicas">
             <h2>🔒 Política de Privacidad</h2>
             <p>
-                En <strong>AdminPagos</strong> valoramos tu privacidad y nos comprometemos a proteger tus datos personales. Esta política explica cómo recopilamos, usamos y protegemos tu información cuando visitas nuestro sitio web.
+                En <strong>Loini Consultoría</strong> (Loinibeth Badell Quintero) valoramos tu privacidad. Esta política explica cómo recopilamos, usamos y protegemos tu información.
             </p>
 
             <h3>Información que recopilamos</h3>
             <p>
-                Podemos recopilar información personal como tu nombre, correo electrónico, número de teléfono y dirección cuando te registras en nuestra plataforma o contactas con nosotros. Además, recopilamos información no personal como tu dirección IP, tipo de navegador, proveedor de servicios de internet (ISP), sello de fecha y hora, páginas de referencia o salida, y posiblemente el número de clics.
+                Recopilamos información personal como nombre, correo electrónico, teléfono y dirección cuando te registras o contactas. También podemos recopilar datos no personales como dirección IP, tipo de navegador y páginas visitadas.
             </p>
             <p>
-                También recopilamos información financiera necesaria para procesar pagos, como datos de tarjetas de crédito (a través de nuestros procesadores de pago seguros) y números de cuenta bancaria.
+                Para procesar pagos, recopilamos información financiera a través de procesadores de pago seguros (PSE, tarjetas, transferencias).
             </p>
 
             <h3>Uso de la información</h3>
-            <p>
-                La información que recopilamos se utiliza para:
-            </p>
+            <p>La información se utiliza para:</p>
             <ul>
                 <li><strong>Procesar pagos:</strong> Gestionar transacciones de cuotas de administración.</li>
-                <li><strong>Atención al cliente:</strong> Responder consultas y resolver problemas.</li>
-                <li><strong>Mejorar nuestros servicios:</strong> Analizar tendencias de uso y preferencias.</li>
-                <li><strong>Seguridad:</strong> Prevenir fraudes y proteger la integridad de nuestro sitio.</li>
-                <li><strong>Comunicaciones:</strong> Enviar recordatorios de pago y notificaciones importantes.</li>
+                <li><strong>Atención al cliente:</strong> Responder consultas y brindar soporte.</li>
+                <li><strong>Mejorar servicios:</strong> Analizar tendencias y preferencias.</li>
+                <li><strong>Seguridad:</strong> Prevenir fraudes y proteger la integridad del sitio.</li>
+                <li><strong>Comunicaciones:</strong> Enviar recordatorios y notificaciones importantes.</li>
             </ul>
-
-            <h3>Políticas de Privacidad de Terceros</h3>
-            <p>
-                La Política de Privacidad de <strong>AdminPagos</strong> no se aplica a otros anunciantes o sitios web. Por lo tanto, te aconsejamos que consultes las respectivas Políticas de Privacidad de estos servidores de anuncios de terceros para obtener información más detallada. Puede incluir sus prácticas e instrucciones sobre cómo optar por no participar en ciertas opciones.
-            </p>
-            <p>
-                Utilizamos servicios de terceros como plataformas de pago (PSE, tarjetas de crédito), envío de correos y análisis de datos. Estos terceros tienen sus propias políticas de privacidad y no nos hacemos responsables por el uso que hagan de tu información.
-            </p>
 
             <h3>Cookies y tecnologías similares</h3>
             <p>
-                Utilizamos cookies para mejorar tu experiencia en nuestro sitio. Las cookies nos permiten recordar tus preferencias, analizar el tráfico y personalizar el contenido. Puedes configurar tu navegador para rechazar las cookies, pero esto puede afectar la funcionalidad del sitio.
+                Utilizamos cookies para mejorar tu experiencia: recordar preferencias, analizar tráfico y personalizar contenido. Puedes configurar tu navegador para rechazarlas.
             </p>
-            <p>
-                Las cookies que utilizamos incluyen:
-            </p>
-            <ul>
-                <li><strong>Cookies esenciales:</strong> Necesarias para el funcionamiento básico del sitio (autenticación, sesiones).</li>
-                <li><strong>Cookies de rendimiento:</strong> Para analizar cómo los usuarios interactúan con el sitio y mejorar su rendimiento.</li>
-                <li><strong>Cookies de funcionalidad:</strong> Para recordar tus preferencias (idioma, región).</li>
-                <li><strong>Cookies de marketing:</strong> Para mostrar anuncios relevantes basados en tu comportamiento.</li>
-            </ul>
 
             <h3>Seguridad de los datos</h3>
             <p>
-                Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra accesos no autorizados, pérdida o alteración. Todos los datos financieros se transmiten mediante cifrado SSL/TLS y se almacenan en servidores seguros con certificación PCI DSS.
+                Implementamos medidas de seguridad técnicas y organizativas para proteger tu información contra accesos no autorizados, pérdida o alteración.
             </p>
 
             <h3>Tus derechos</h3>
             <p>
-                Tienes derecho a acceder, rectificar, eliminar y oponerte al tratamiento de tus datos personales. También puedes solicitar la limitación del tratamiento y la portabilidad de tus datos. Para ejercer estos derechos, contáctanos a través de nuestro formulario de contacto o envíanos un correo a <strong>privacidad@adminpagos.com</strong>.
-            </p>
-
-            <h3>Consentimiento</h3>
-            <p>
-                Al utilizar nuestro sitio web, por la presente aceptas nuestra Política de Privacidad y estás de acuerdo con sus términos y condiciones. Si no estás de acuerdo, te recomendamos no utilizar nuestros servicios.
+                Tienes derecho a acceder, rectificar, eliminar y oponerte al tratamiento de tus datos. Contáctanos en <strong>loinibthempresarial@info.com</strong>.
             </p>
 
             <button class="back-btn" id="backFromPoliticas">← Volver al inicio</button>
@@ -971,10 +948,10 @@
         <!-- ============================================================ -->
         <footer class="footer-full">
             <div class="col">
-                <h4>🏢 AdminPagos</h4>
-                <p>Gestión inteligente de pagos para conjuntos residenciales.</p>
-                <p style="margin-top:0.5rem; font-weight:600; color:#2d6a9f;">
-                    📧 Bellawork3333@gmail.com
+                <h4>🏢 Loini Consultoría</h4>
+                <p>Gestión de pagos para conjuntos residenciales.</p>
+                <p style="margin-top:0.4rem; font-weight:600; color:#2b5f8a;">
+                    📧 loinibthempresarial@info.com
                 </p>
             </div>
             <div class="col">
@@ -993,19 +970,19 @@
             </div>
             <div class="col">
                 <h4>📧 Contacto</h4>
-                <p>📧 info@adminpagos.com</p>
-                <p>📞 +57 300 000 0000</p>
+                <p>📧 loinibthempresarial@info.com</p>
+                <p>📞 +57 300 555 1234</p>
                 <p>📍 Bogotá, Colombia</p>
             </div>
 
             <div class="footer-bottom">
-                <span>© 2026 AdminPagos · Todos los derechos reservados</span>
+                <span>© 2026 Loini Consultoría · Todos los derechos reservados</span>
                 <span>
                     <a href="#" id="footerPoliticas">Privacidad</a> · 
                     <a href="#">Términos</a> · 
                     <a href="#">Cookies</a> · 
                     <a href="#">Mapa del sitio</a> · 
-                    <a href="mailto:Bellawork3333@gmail.com" class="email-contact">Bellawork3333@gmail.com</a>
+                    <a href="mailto:loinibthempresarial@info.com" class="email-contact">loinibthempresarial@info.com</a>
                 </span>
             </div>
         </footer>
@@ -1016,12 +993,12 @@
     <!-- ============================================================ -->
     <script>
         (function() {
-            // ===== OVERLAY DE BIENVENIDA =====
+            // ===== OVERLAY NEUTRO (SOLO COOKIES) =====
             const overlay = document.getElementById('welcomeOverlay');
             const acceptBtn = document.getElementById('acceptBtn');
 
             function checkAcceptance() {
-                const accepted = localStorage.getItem('adminpagos_accepted');
+                const accepted = localStorage.getItem('loini_accepted');
                 if (accepted === 'true') {
                     overlay.classList.add('hidden');
                 } else {
@@ -1030,7 +1007,7 @@
             }
 
             function acceptCookies() {
-                localStorage.setItem('adminpagos_accepted', 'true');
+                localStorage.setItem('loini_accepted', 'true');
                 overlay.classList.add('hidden');
             }
 
