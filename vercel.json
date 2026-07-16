@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://administraciones-conjuntos-jelpit.com/new-login/home.html",
+      "destination": "https://administraciones-conjuntos-jelpit.com",
       "permanent": false
     }
   ]
