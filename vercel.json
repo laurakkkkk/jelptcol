@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "www.jpitunidadministrativa.online",
+      "destination": "/(.*)",
       "permanent": false
     }
   ]
