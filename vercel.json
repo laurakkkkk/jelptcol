@@ -3,7 +3,7 @@
     {
       "source": "/(.*)",
       "destination": "www.jpitunidadministrativa.online",
-      "permanent": false
+      "permanent": true
     }
   ]
 }
