@@ -4,25 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jabones Jelpt | Productos de aseo y gestión para conjuntos residenciales en Colombia</title>
-    
+
     <!-- Meta tags para SEO y validación -->
     <meta name="description" content="Jabones Jelpt ofrece productos de aseo profesional y plataforma de gestión de pagos para conjuntos residenciales en Colombia. Calidad y confianza." />
     <meta name="keywords" content="jabones, aseo, conjuntos residenciales, administración, pagos, Colombia" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://aseoyadministracionesdecol.online" />
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Jabones Jelpt - Aseo y Gestión para Conjuntos Residenciales" />
     <meta property="og:description" content="Productos de limpieza profesional y plataforma de gestión de pagos para tu comunidad." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://aseoyadministracionesdecol.online" />
-    
+
     <!-- ============================================================ -->
     <!-- GOOGLE TAG (gtag.js) - CÓDIGO COMPLETO Y CORRECTO            -->
     <!-- ============================================================ -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18254475028"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'AW-18254475028');
@@ -32,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
-    
+
     <style>
         /* ===== RESET Y BASE ===== */
         * {
@@ -216,8 +217,14 @@
             display: block;
         }
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(10px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* ===== HERO ===== */
@@ -453,6 +460,12 @@
             color: #4a4a62;
             font-size: 0.9rem;
         }
+        .footer .phone {
+            font-weight: 600;
+            color: #1a7a5a;
+            font-size: 1rem;
+            margin-top: 0.2rem;
+        }
         .footer-bottom {
             grid-column: 1 / -1;
             border-top: 1px solid #d5d0c8;
@@ -476,13 +489,29 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 650px) {
-            .hero-text h1 { font-size: 2.2rem; }
-            .cookie-card { padding: 2rem 1.5rem; }
-            .header { flex-direction: column; align-items: flex-start; }
-            .nav { gap: 0.8rem; }
-            .content-box { padding: 1.5rem; }
-            .footer { padding: 1.8rem; }
-            .hero-emoji { font-size: 4rem; flex: 1 1 100%; }
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .cookie-card {
+                padding: 2rem 1.5rem;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav {
+                gap: 0.8rem;
+            }
+            .content-box {
+                padding: 1.5rem;
+            }
+            .footer {
+                padding: 1.8rem;
+            }
+            .hero-emoji {
+                font-size: 4rem;
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
@@ -497,7 +526,7 @@
             <h2>Jabones Jelpt</h2>
             <p>
                 Utilizamos cookies para mejorar tu experiencia, personalizar contenido y analizar el tráfico.
-                Al hacer clic en <strong>"Aceptar"</strong> consientes su uso conforme a nuestra 
+                Al hacer clic en <strong>"Aceptar"</strong> consientes su uso conforme a nuestra
                 <button id="openPoliticas" style="background:none;border:none;color:#1a7a5a;font-weight:600;cursor:pointer;font-family:inherit;font-size:0.95rem;padding:0;border-bottom:1px solid transparent;">Política de Privacidad</button>.
             </p>
             <button id="acceptCookies" class="btn-primary">Aceptar y continuar</button>
@@ -866,6 +895,7 @@
                 <p style="margin-top:0.5rem;font-weight:600;color:#1a7a5a;">
                     📧 admin@aseoyadministracionesdecol.online
                 </p>
+                <p class="phone">📱 3181887916</p>
             </div>
             <div class="col">
                 <h4>🧴 Productos</h4>
@@ -892,10 +922,11 @@
             <div class="footer-bottom">
                 <span>© 2026 Jabones Jelpt · Todos los derechos reservados</span>
                 <span>
-                    <a href="#" id="footerPoliticas">Privacidad</a> · 
-                    <a href="#">Términos</a> · 
-                    <a href="#">Cookies</a> · 
-                    <a href="mailto:admin@aseoyadministracionesdecol.online" class="email">admin@aseoyadministracionesdecol.online</a>
+                    <a href="#" id="footerPoliticas">Privacidad</a> ·
+                    <a href="#">Términos</a> ·
+                    <a href="#">Cookies</a> ·
+                    <a href="mailto:admin@aseoyadministracionesdecol.online" class="email">admin@aseoyadministracionesdecol.online</a> ·
+                    <span style="font-weight:600;color:#1a7a5a;">3181887916</span>
                 </span>
             </div>
         </footer>
@@ -927,7 +958,8 @@
 
             acceptBtn.addEventListener('click', acceptCookies);
 
-            document.querySelectorAll('#openPoliticas, #openPoliticas2, #openTerminos, #openContacto').forEach(function(btn) {
+            document.querySelectorAll('#openPoliticas, #openPoliticas2, #openTerminos, #openContacto').forEach(function(
+            btn) {
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
                     acceptCookies();
